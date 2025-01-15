@@ -5,9 +5,12 @@ import {
   decrement,
   increment,
   selectCount,
-} from '../features/counter/counterSlice';
+} from './features/counter/counterSlice';
 import { useSelector, useDispatch } from 'react-redux'
 
+
+function App() {
+// Get the count from the store
 const count = useSelector(selectCount)
 const dispatch = useDispatch()
 // Dispatch increment action
@@ -18,9 +21,6 @@ const incrementerClicked = () => {
 const decrementerClicked = () => {
   dispatch(decrement());
 }
-
-
-export function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -36,12 +36,15 @@ export function App() {
         >
           Learn React
         </a>
-      </header>
-      <main>
+        <main>
           <p id='counter'>{count}</p>
-        <button id='incrementer' onClick={incrementerClicked}>+</button>
-        <button id='decrementer' onClick={decrementerClicked}>-</button>
-      </main>
+          <button id='incrementer' onClick={incrementerClicked}>+</button>
+         <button id='decrementer' onClick={decrementerClicked}>-</button>
+        </main>
+      </header>
+      
     </div>
   );
 }
+
+export default App;
