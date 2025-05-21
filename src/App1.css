@@ -1,0 +1,249 @@
+.App {
+    text-align: center;
+    /* padding: 20px;
+    box-sizing: border-box; */
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form div {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  
+  .post-excerpt {
+    background: #f0f0f0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  @media (max-width: 600px) {
+    .App-header, .form div, .post-excerpt {
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1200px) {
+    .App-header, .form div, .post-excerpt {
+      width: 80%;
+    }
+  }
+  
+  @media (min-width: 1201px) {
+    .App-header, .form div, .post-excerpt {
+      width: 70%;
+    }
+  }
+  .spinner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spinner h4 {
+    margin: 5px;
+  }
+  
+  /* https://projects.lukehaas.me/css-loaders/ , Loader #3 */
+  .loader {
+    font-size: 10px;
+    margin: 10px;
+    /* text-indent: -9999em; */
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background: var(--redux-color);
+    background: -moz-linear-gradient(left, var(--redux-color) 10%, rgba(128, 0, 255, 0) 42%);
+    background: -webkit-linear-gradient(left, var(--redux-color) 10%, rgba(128, 0, 255, 0) 42%);
+    background: -o-linear-gradient(left, var(--redux-color) 10%, rgba(128, 0, 255, 0) 42%);
+    background: -ms-linear-gradient(left, var(--redux-color) 10%, rgba(128, 0, 255, 0) 42%);
+    background: linear-gradient(to right, var(--redux-color) 10%, rgba(128, 0, 255, 0) 42%);
+    position: relative;
+    -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .loader:before {
+    width: 50%;
+    height: 50%;
+    background: var(--redux-color);
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+  
+  .loader:after {
+    background: #ffffff;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  @-webkit-keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Notifications list */
+  
+  .notification {
+    border: 1px solid #eee;
+    padding: 0.5rem;
+  }
+  
+  .notificationsList .notification + .notification {
+    border-top: none;
+  }
+  
+  .notification.new {
+    background-color: rgba(29, 161, 242, 0.1);
+  }
+
+  /* Navbar */
+
+nav {
+  display: flex;
+  padding: 0;
+  background: var(--redux-color);
+}
+
+nav section {
+  width: 100%;
+}
+
+nav section h1 {
+  margin: 0.5rem 0;
+}
+
+section h2 {
+  margin: 0.5rem 0;
+}
+
+nav section h1,
+nav section {
+  color: white;
+}
+
+nav a,
+nav a:active {
+  font-weight: 700;
+  padding: 0.1rem 1rem;
+  border-radius: 4px;
+  color: white !important;
+  background: #481499;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 599px) {
+  nav a {
+    padding: 0.1rem 0.3rem;
+  }
+}
+
+
+  nav a:first-of-type {
+    margin-left: -1.5rem;
+  }
+  
+  nav a:hover {
+    color: white;
+    background: #926bcf;
+  }
+  
+  .navContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .navLinks {
+    display: flex;
+  }
+  
+  .navLinks a {
+    margin-left: 5px;
+  }
+  
+  .navLinks a .badge {
+    margin-left: 5px;
+    position: relative;
+  }
+  
+  .navContent .userDetails {
+    display: flex;
+    align-items: center;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    color: #212529;
+    background-color: #f8f9fa;
+  }
+  
+  .navLinks :first-child {
+    margin-left: 0;
+  }  

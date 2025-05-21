@@ -1,38 +1,353 @@
-.App {
-  text-align: center;
+/* App.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+  }
+  
+  .App {
+    text-align: center;
+    /* width:'99vw'; */
+    /* font-family: Arial, sans-serif; */
+  }
+  
+  .App-header {
+    
+    background-color: #282c34;
+    min-height: 100vh;
+    /* min-width: 100vw; */
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* font-size: calc(10px + 2vmin); */
+    color: white;
+  }
+  .App-header-Profile {
+    
+    /* background-color: #282c34; */
+    min-height: 100vh;
+    /* min-width: 100vw; */
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* font-size: calc(10px + 2vmin); */
+    color: white;
+  }
+  .single-post{
+    background: #282c34;
+    min-height: 100vh;
+    /* min-width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+     justify-content: center;
+    /* font-size: calc(10px + 2vmin); */
+    color: white;
+  }
+  
+  .form {
+    background: #fff;
+    color: #6c6b6b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family:'Times New Roman', Times, serif;
+  
+    
+    /* width: 90%; */
+    /* font-size: calc(50px + 2vmin); */
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  .form1 {
+    background: #ffffff;
+    color: #6c6b6b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family:'Times New Roman', Times, serif;
+  
+  /* border: 2px solid #f10707; 
+  outline: none;
+  background-clip: padding-box; */
+    font-size: xx-large;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  form input{
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+  }
+     input {
+      box-sizing: border-box;
+      /* font-family: Arial, sans-serif; */
+      /* font-size: 16px; */
+      /* font-weight: normal; */
+      /* outline: none;        */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: calc(20% - 22px);
+    margin-bottom: 10px;
+  }
+  
+  textarea{
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 10px;
+    margin: 2px;
+    font-size: 16px;
+    border: none;
+    background-color: #61dafb;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input + button{
+    padding: 10px;
+    margin: 2px;
+    font-size: 8px;
+    border: none;
+    background-color: #a5a5a5;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  } 
+  button:hover {
+    background-color: #4fa3d1;
+  }
+  /* .post{
+    display: flex;   
+    gap: 20px;              
+    padding-left: 20px; 
+    width: 30vw; 
+  } */
+  .post {
+    display: flex;           /* Set the container as a flexbox */
+    flex-wrap: wrap;         /* Allow items to wrap onto new lines */
+    
+    gap: 20px;               /* Adds space between rows and columns */
+    width: 100%;             /* Full width container */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.post > article {
+    flex: 1 1 calc(33.33% - 20px); /* Each item takes up ~33% of the width (responsive) */
+    /* max-width: 33.33%;             Prevents the item from growing too large */
+    box-sizing: border-box;        /* Ensures padding/margin are included in width */
+    /* margin: 10px 0;                Optional: vertical spacing */
+    background-color: #000000;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+.post > article {
+      flex: 1 1 100%; /* Stack posts vertically on smaller screens */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .post1{
+    /* padding-left: 20px; 
+    width: 90vw;  */
+    background: #000000;
+    color: #fff;
+  }
+  .rm-underline{
+    text-decoration: none;
+    /* font-style: italic; */
+    /* color: #000;  */
+    /* text-decoration-color: #c300ff; */
+  }
+  /* .post-excerpt {
+    margin: 10px auto;
+    text-align: left;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    font-size: small;
+    width:90vw;
+  
+    background: #363636;
+    color: #fff;
+  } */
+  
+/* General Styles for Post */
+.post-excerpt {
+  box-sizing: border-box; /* Ensures padding/margin are included in width */
+  width: 100%; /* Use percentage for responsive width */
+  max-width: 1000px; /* Restrict maximum width to prevent excessive stretching */
+  margin: 10px auto; /* Center the box horizontally and add vertical spacing */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease; 
+
+  /* Prevent content from overflowing */
+  overflow: hidden;
+  word-wrap: break-word; /* Break long words into multiple lines if needed */
+}
+
+.post-excerpt img {
+  max-width: 100%; /* Ensure images scale within their container */
+  height: auto; /* Maintain aspect ratio for images */
+  border-radius: 4px; /* Optional: Add rounded corners to images */
+}
+
+.post-excerpt p {
+  margin: 0; /* Adjust margins for better spacing inside the box */
+  line-height: 1.5; /* Improve readability with consistent spacing */
+}
+
+/* Hover effect for better interactivity */
+.post-excerpt:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+}
+
+/* Responsive behavior for small devices */
+@media (max-width: 768px) {
+  .post-excerpt {
+    padding: 8px;
+  }
+}
+
+
+/* Post Title */
+.post-excerpt h3 {
+  /* font-size: 1.5em; */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Post Content */
+/* .post-excerpt p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0;
+} */
+
+/* User Info */
+.post-excerpt samp {
+  text-align: left;
+  font-size: 0.9em;
+  font-style: italic;
+  color: #888;
+}
+
+/* Images */
+/* .post-excerpt img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+} */
+
+/* Buttons & Links */
+.post-excerpt a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #007bff;
+  transition: color 0.2s ease;
+}
+
+.post-excerpt a:hover {
+  color: #0056b3;
+}
+
+.post-excerpt img.icon {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.post-excerpt img.icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Reaction Buttons */
+.reaction-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  margin-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.reaction-buttons button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reaction-buttons button:hover {
+  color: #007bff;
+  transform: scale(1.1);
 }
+
+/* TimeAgo Component */
+.time-ago {
+  font-size: 0.85em;
+  color: #999;
+  margin-top: 10px;
+  text-align: right;
+}
+
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .form {
+      padding: 15px;
+    }
+  
+    input {
+      font-size: 14px;
+    }
+  
+    /* button {
+      font-size: 14px;
+    } */
+  
+    .post-excerpt {
+      margin: 10px auto;
+      padding: 15px;
+      
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form {
+      width: 95%;
+    }
+  
+    input {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+  
+    /* button {
+      font-size: 12px;
+      padding: 8px 16px;
+    } */
+  
+    .post-excerpt {
+      margin: 5px auto;
+      padding: 10px;
+    }
+  }
+  

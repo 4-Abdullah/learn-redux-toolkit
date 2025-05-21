@@ -1,0 +1,164 @@
+.App {
+  text-align: center;
+  /* height: 100vh; */
+  /* padding: 100px; */
+  /* margin: 100px; */
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  --redux-color: #764abc;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.button.small {
+  padding: 0.4rem 0.75rem;
+  margin: 0.25rem;
+}
+
+@media (max-width: 599px) {
+  .button.small {
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+
+
+/* Main content */
+
+section {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 600px) {
+  section h1 {
+    font-size: 3rem;
+  }
+  
+}
+/* form */
+
+form {
+  background-color: #0f0e0e;
+  height: 20vw;
+  width: 95vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: xx-large;
+
+  
+}
+
+/* Posts list */
+
+.post h2 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.post-excerpt {
+  margin-bottom: 20px;
+  text-align: left;
+  width: 90vw;
+  padding: 0.25rem 0.25rem;
+  border: 1px solid rgb(177, 174, 174);
+  border-radius: 7px;
+}
+
+.posts-list .post-excerpt + .post-excerpt {
+  margin-top: 0.5rem;
+}
+
+.posts-container.disabled {
+  opacity: 0.5;
+}
+
+.post-excerpt h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+p.post-content {
+  margin-top: 10px;
+}
+button{
+  color:#ffffff;
+  background-color:  rgb(0, 179, 255);
+  border: 1px;
+  border-radius: 5%;
+  font-size: x-large;
+}
+.button {
+  display: inline-block;
+  background: #1976d2;
+  color: white;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+}
+
+button:disabled,
+button:disabled:hover {
+  opacity: 0.5;
+}
+
+button.reaction-button {
+  border: 1px solid #e0e3e9;
+  padding: 5px 10px;
+  margin: 5px 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
